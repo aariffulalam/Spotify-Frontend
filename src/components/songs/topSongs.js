@@ -6,7 +6,7 @@ export default function TopSong() {
             <h1>Top Songs are working</h1>
 
 
-            <table class="table">
+            <table className="table">
                 <thead style={{ backgroundColor: "#6c757d" }}>
                     <tr>
                         <th scope="col">Artwork</th>
