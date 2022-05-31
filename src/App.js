@@ -1,17 +1,15 @@
-import Navbar from './components/navbar/navbar'
-import TopSong from './components/songs/topSongs';
-import Test from './components/test/test'
+import Navbar from './components/navbar/Navbar'
+// import Nav from './components/navbar/Nav'
 
-import NoteState from './context/notes/NoteState'
-
-
+import TopSong from './components/songs/Header';
+import DataState from './context/DataState'
 function App() {
   return (
-    <NoteState>
-      <Test />
+    <DataState>
       <Navbar />
+      {/* <Nav /> */}
       <TopSong />
-    </NoteState>
+    </DataState>
   );
 }
 

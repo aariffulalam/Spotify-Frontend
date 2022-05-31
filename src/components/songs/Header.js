@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import SongDetails from './Format'
+import DataContext from "../../context/DataContext";
 
-export default function TopSong() {
+export default function TopSongHeading() {
+    const { topsongs } = useContext(DataContext)
+    // const arr = [1, 2, 3, 4, 5, 6, 7, 8]
+    const arr = topsongs
+    // console.log(topsongs)
     return (
         <div style={{ border: "10px solid red" }}>
-            <h1>Top Songs are working</h1>
+            <h1>Top Songs are woSoSongDetailsgDetailsing</h1>
 
 
             <table className="table">
-                <thead style={{ backgroundColor: "#6c757d" }}>
+                <thead style={{ backgroundColor: "#6c757d" }} b>
                     <tr>
                         <th scope="col">Artwork</th>
                         <th scope="col">Song</th>
@@ -17,7 +23,18 @@ export default function TopSong() {
 
                     </tr>
                 </thead>
-                <tbody>
+
+                {
+                    arr.map((element) => {
+                        console.log(element)
+                        // return <SongDetails song={element} />
+
+                    })
+                }
+
+
+
+                {/* <tbody>
                     <tr style={{ verticalAlign: 'baseline' }}>
                         <th scope="row">
                             <img src={`${require('./download.jpeg')}`} style={{ width: '10rem', height: '10rem' }} alt="Artist" />
@@ -40,7 +57,7 @@ export default function TopSong() {
                         <td>the Bird</td>
                         <td>@twitter</td>
                     </tr>
-                </tbody>
+                </tbody> */}
             </table>
 
         </div>
