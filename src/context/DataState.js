@@ -9,7 +9,6 @@ const DataState = ({ children }) => {
         await fetch("http://localhost:3000/spotify/songs").then((res) => {
             return res.json()
         }).then((data) => {
-            console.log(typeof (data))
             setTopSongs(data.getSongs)
         })
     }
